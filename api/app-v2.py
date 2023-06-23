@@ -18,9 +18,7 @@ def home():
 def run_script():
     # Configuración de Selenium
     options = Options()
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--ignore-ssl-errors=yes')
-    options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--headless')  # Ejecutar Chrome en modo headless
     driver = webdriver.Chrome(options=options)
 
     def login():

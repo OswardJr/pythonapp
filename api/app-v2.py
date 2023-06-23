@@ -13,12 +13,17 @@ CORS(app)
 @app.route('/')
 def home():
     return 'Home Page Route'
-    
+
 @app.route('/run')
 def run_script():
     # Configuración de Selenium
-    options = Options()
-    options.add_argument('--headless')  # Ejecutar Chrome en modo headless
+    # options = Options()
+    # options.add_argument('--headless')  # Ejecutar Chrome en modo headless
+    # driver = webdriver.Chrome(options=options)
+
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless=new")
+
     driver = webdriver.Chrome(options=options)
 
     def login():

@@ -8,7 +8,7 @@
      "routes": [
         {
             "src": "/(.*)",
-            "use": "api/app-v2.py"
+            "dest": "api/app-v2.py"
         }
      ]
  }
